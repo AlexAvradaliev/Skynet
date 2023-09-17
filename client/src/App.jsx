@@ -1,12 +1,18 @@
 import { BrowserRouter } from 'react-router-dom';
+import { Provider as ReduxProvider } from 'react-redux';
 
+import { store } from './features/store';
 import Router from './Router';
+
+import './generalCss/App.css';
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Router />
-    </BrowserRouter>
+    <ReduxProvider store={store}>
+      <BrowserRouter>
+        <Router />
+      </BrowserRouter>
+    </ReduxProvider>
   );
 };
 
