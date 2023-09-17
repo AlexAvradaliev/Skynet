@@ -7,7 +7,6 @@ function errorWrapper(err) {
     status = x.status;
   });
 
-  console.log(errors);
   return { status, errors };
 }
 

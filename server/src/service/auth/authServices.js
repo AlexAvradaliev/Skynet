@@ -276,7 +276,6 @@ exports.socialRegister = async ({ email, firstName, lastName }) => {
 
 exports.socialUser = async (id) => {
   try {
-    console.log(id);
     const user = await User.findById(id);
     if (!user) {
       const err = {
